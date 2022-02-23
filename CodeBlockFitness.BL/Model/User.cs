@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace CodeBlockFitness.BL.Model
 {
+   [Serializable]
    public class User
     {
         public string Name { get; }
@@ -13,6 +11,15 @@ namespace CodeBlockFitness.BL.Model
         public DateTime BirthDate { get;  }
         public double Weight { get; set; }
         public double Height { get; set; }
+
+        /// <summary>
+        /// User constructor.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="gender"></param>
+        /// <param name="birthDate"></param>
+        /// <param name="weight"></param>
+        /// <param name="height"></param>
         public User(string name, Gender gender, DateTime birthDate, double weight, double height)
         {
             #region Проверка условий

@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace CodeBlockFitness.BL.Model
 {
+    [Serializable]
     /// <summary>
     /// Gender.
     /// </summary>
@@ -14,9 +12,9 @@ namespace CodeBlockFitness.BL.Model
         /// <summary>
         /// Name.
         /// </summary>
-        private string Name { get; }
+        public string Name { get; }
         /// <summary>
-        /// Gender construct
+        /// Gender construct.
         /// </summary>
         /// <param name="name">Gender name</param>
         public Gender(string name)
