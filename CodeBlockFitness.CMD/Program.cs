@@ -10,18 +10,15 @@ namespace CodeBlockFitness.CMD
             Console.WriteLine("Добро пожаловать в приложение Fitness!");
             Console.WriteLine("Введите имя пользователя: ");
             var name = Console.ReadLine();
-            Console.WriteLine("Введите пол: ");
-            var gender = Console.ReadLine();
-            Console.WriteLine("Введите дату своего рождения: ");
-            var birthDate = DateTime.Parse(Console.ReadLine());
-            //birthDate =  DateTime.TryParse(birthDate,result);
-            Console.WriteLine("Введите вес: ");
-            var weight = double.Parse(Console.ReadLine());
-            Console.WriteLine("Введите рост: ");
-            var height = double.Parse(Console.ReadLine());
-
-            var userController = new UserController(name, gender, birthDate, weight, height);
-            userController.Save();
+            var userController = new UserController(name);
+            if (userController.IsNewUser)
+            {
+                Console.WriteLine();
+                 var gender =  Console.ReadLine();
+            }
+            Console.WriteLine(userController.CurrentUser);
+           
+            // TODO: доделать ввод и обработку остальных данных 
         }
     }
 }
